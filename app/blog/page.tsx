@@ -15,7 +15,7 @@ export default function BlogPage() {
   return (
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">
-        read my blog
+        read my blog 📚
       </h1>
       {allBlogs
         .sort((a, b) => {
@@ -36,6 +36,8 @@ export default function BlogPage() {
               <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
                 {post.metadata.title}
               </p>
+
+              {/* Views counter commented until DB is set up */}
               <Suspense fallback={<p className="h-6" />}>
                 <Views slug={post.slug} />
               </Suspense>
